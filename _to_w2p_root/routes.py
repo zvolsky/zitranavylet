@@ -13,4 +13,3 @@ routes_in = (
   )
 
 routes_out = [(x, y) for (y, x) in routes_in[:-3]]
-routes_out[0] = ('/zitranavylet/$anything', '/')
