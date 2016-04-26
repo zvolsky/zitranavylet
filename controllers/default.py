@@ -1,8 +1,9 @@
 # -*- coding: utf-8 -*-
-# this file is released under public domain and you can use without limitations
-
 def index():
-    redirect(URL('portal', 'uvodem'))
+    if 'mojeknihovna.eu' in request.url.lower():
+        redirect(URL('codex2020', 'default', 'index'))
+    else:
+        redirect(URL('zv', 'portal', 'uvodem'))
 
 
 def user():
@@ -41,5 +42,3 @@ def call():
     supports xml, json, xmlrpc, jsonrpc, amfrpc, rss, csv
     """
     return service()
-
-
