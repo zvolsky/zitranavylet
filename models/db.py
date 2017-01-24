@@ -33,7 +33,9 @@ if not request.env.web2py_runtime_gae:
     db = DAL(myconf.get('db.uri'),
              pool_size=myconf.get('db.pool_size'),
              migrate_enabled=myconf.get('db.migrate'),
-             check_reserved=['all'])
+             check_reserved=['all'],
+             #fake_migrate_all=True
+             )
 else:
     # ---------------------------------------------------------------------
     # connect to Google BigTable (optional 'google:datastore://namespace')

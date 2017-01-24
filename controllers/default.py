@@ -1,9 +1,7 @@
 # -*- coding: utf-8 -*-
+
 def index():
-    if 'mojeknihovna.eu' in request.url.lower():
-        redirect(URL('codex2020', 'default', 'index'))
-    else:
-        redirect(URL('zv', 'portal', 'uvodem'))
+    redirect(URL('zv', 'portal', 'uvodem'))
 
 
 def user():
